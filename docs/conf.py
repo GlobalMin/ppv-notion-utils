@@ -14,7 +14,8 @@ from sphinx.application import Sphinx
 
 project = "PPV Notion utils"
 author = "Jameson Stillwell"
-master_doc = "index"
+root = "index"
+
 language = "en"
 
 # -- General configuration ---------------------------------------------------
