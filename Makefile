@@ -1,3 +1,5 @@
+VENV = .venv
+VENV_PIP = $(VENV)/bin/pip
 
 
 
@@ -12,6 +14,7 @@ clean: ## clean build artifacts
 	@find . -type d -iname __pycache__ -exec rm -r {} +
 
 
+
 .PHONY: install
 install:
 
@@ -20,7 +23,7 @@ install:
 
 	@echo "🚀 Installing dependencies"
 	@.venv/bin/pip install -r requirements.txt
-	@.venv/bin/pip install -r requirements-dev.txt
+	@.venv/bin/pip install -r requirements_dev.txt
 	@.venv/bin/pip install -e .
 
 

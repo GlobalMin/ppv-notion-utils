@@ -69,9 +69,7 @@ def _create_properties_copies_and_add_increment(num, properties_dict, days=7):
     new_dates = []
     for i in range(num):
         days_to_add = (i + 1) * days
-        updated_date = pd.to_datetime(original_date) + datetime.timedelta(
-            days=days_to_add
-        )
+        updated_date = pd.to_datetime(original_date) + datetime.timedelta(days=days_to_add)
         new_dates.append(updated_date.strftime("%Y-%m-%d"))
 
     # Main update step to the properties dict
