@@ -140,22 +140,6 @@ use [pip install] with the `--user` option instead.
 
 You need four tools to use this template:
 
-- [Cookiecutter] to create projects from the template,
-- [Poetry] to manage packaging and dependencies
-- [Nox] to automate checks and other tasks
-- [nox-poetry] for using Poetry in Nox sessions
-
-Install [Cookiecutter] using pipx:
-
-```console
-$ pipx install cookiecutter
-```
-
-Install [Poetry] by downloading and running [install-poetry.py]:
-
-```console
-$ python install-poetry.py
-```
 
 Install [Nox] and [nox-poetry] using pipx:
 
@@ -241,16 +225,4 @@ or `0.0.0` for an unreleased package.
 See [The Release workflow] for details.
 :::
 
-Your choices are recorded in the file `.cookiecutter.json` in the generated project,
-together with the URL of this Cookiecutter template.
-Having this [JSON] file in the project makes it possible later on
-to update your project with changes from the Cookiecutter template,
-using tools such as [cupper].
-
-In the remainder of this guide,
-`<project>` and `<package>` are used
-to refer to the project and package names, respectively.
-By default, their only difference is that
-the project name uses hyphens (_kebab case_),
-whereas the package name uses underscores (_snake case_).
 
