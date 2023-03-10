@@ -14,6 +14,12 @@ clean: ## clean build artifacts
 	@find . -type d -iname __pycache__ -exec rm -r {} +
 
 
+.PHONY: clean-docs
+clean: 
+	@echo "🚀 Cleaning up docs build artifacts"
+	@rm -rf _build	
+	@echo "🚀 Cleaning up docs cache files"
+	@cd docs && rm -rf _build
 
 .PHONY: install
 install:
@@ -25,9 +31,6 @@ install:
 	@.venv/bin/pip install -r requirements.txt
 	@.venv/bin/pip install -r requirements_dev.txt
 	@.venv/bin/pip install -e .
-
-
-
 
 .PHONY: help
 help:

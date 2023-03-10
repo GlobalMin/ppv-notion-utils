@@ -20,12 +20,8 @@ language = "en"
 
 # -- General configuration ---------------------------------------------------
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
 extensions = [
     "myst_parser",
-
     "sphinx.ext.githubpages",
     "sphinx.ext.viewcode",
     "sphinx.ext.autodoc",
@@ -40,6 +36,37 @@ extensions = [
     "sphinx_togglebutton",
 ]
 
+# -- MyST settings ---------------------------------------------------
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
+    "deflist",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "colon_fence",
+    "smartquotes",
+    "replacements",
+    "linkify",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+    "attrs_block",
+    "attrs_inline"
+
+]
+
+myst_number_code_blocks = ["typescript"]
+myst_heading_anchors = 0
+myst_footnote_transition = True
+myst_dmath_double_inline = True
+myst_enable_checkboxes = True
+myst_substitutions = {
+    "role": "[role](#syntax/roles)",
+    "directive": "[directive](#syntax/directives)",
+}
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
@@ -50,14 +77,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 suppress_warnings = ["myst.strikethrough"]
 
-# intersphinx_mapping = {
-#     "python": ("https://docs.python.org/3.7", None),
-#     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
-#     "markdown_it": ("https://markdown-it-py.readthedocs.io/en/latest", None),
-# }
-
 # -- HTML output -------------------------------------------------
-html_title = "PPV Notion Utils Documentation"
+html_title = "PPV Notion Utils"
 
 html_last_updated_fmt = ""
 html_static_path = ["_static"]
@@ -77,58 +98,6 @@ html_theme = "furo"
 # -- Autodoc settings ---------------------------------------------------
 
 
-# nitpicky = True
-# nitpick_ignore_regex = [
-#     (r"py:.*", r"docutils\..*"),
-#     (r"py:.*", r"pygments\..*"),
-# ]
-# nitpick_ignore = [
-#     ("py:obj", "myst_parser._docs._ConfigBase"),
-#     ("py:exc", "MarkupError"),
-#     ("py:class", "sphinx.util.typing.Inventory"),
-#     ("py:class", "sphinx.writers.html.HTMLTranslator"),
-#     ("py:obj", "sphinx.transforms.post_transforms.ReferencesResolver"),
-# ]
-
-# -- MyST settings ---------------------------------------------------
-
-myst_enable_extensions = [
-    "dollarmath",
-    "amsmath",
-    "deflist",
-    "fieldlist",
-    "html_admonition",
-    "html_image",
-    "colon_fence",
-    "smartquotes",
-    "replacements",
-    "linkify",
-    "strikethrough",
-    "substitution",
-    "tasklist",
-    "attrs_block",
-    "attrs_inline"
-
-]
-myst_number_code_blocks = ["typescript"]
-myst_heading_anchors = 0
-myst_footnote_transition = True
-myst_dmath_double_inline = True
-myst_enable_checkboxes = True
-myst_substitutions = {
-    "role": "[role](#syntax/roles)",
-    "directive": "[directive](#syntax/directives)",
-}
-
-
-
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-
-
-
 def setup(app: Sphinx):
     """Add functions to the Sphinx setup."""
     from myst_parser._docs import (
@@ -140,7 +109,7 @@ def setup(app: Sphinx):
         MystLexer,
         MystToHTMLDirective,
         MystWarningsDirective,
-        # NumberSections,
+        NumberSections,
         StripUnsupportedLatex,
     )
 
@@ -152,7 +121,7 @@ def setup(app: Sphinx):
     app.add_directive("myst-admonitions", MystAdmonitionDirective)
     app.add_directive("myst-to-html", MystToHTMLDirective)
     app.add_post_transform(StripUnsupportedLatex)
-    # app.add_post_transform(NumberSections)
+    app.add_post_transform(NumberSections)
     app.connect("html-page-context", add_version_to_css)
     app.add_lexer("myst", MystLexer)
 
