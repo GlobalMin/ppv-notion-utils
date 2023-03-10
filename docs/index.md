@@ -1,10 +1,13 @@
-# 🔎 Overview
 
-## Intro shit.
 
-:::{note}
-A note.
-Cool right?
+# PPV Notion Utils
+A set of helper scripts that automate or speed up componente of he Pillars, Pipelines, and Vaults (PPV) life design system that runs in Notion.
+
+
+:::{admonition} PLEASE MAKE SURE YOU READ
+:class: note
+
+This is a custom title for a tip admonition.
 :::
 
 :::{list-table} Project variables
@@ -39,6 +42,3 @@ codeofconduct
 reference
 
 ```
-
-
-
