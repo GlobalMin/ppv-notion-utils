@@ -1,4 +1,4 @@
-selector_to_html = {"a[href=\"#code-of-conduct\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Code of Conduct<a class=\"headerlink\" href=\"#code-of-conduct\" title=\"Permalink to this heading\">#</a></h1><h2>1.\u00a0\u00a01. Purpose<a class=\"headerlink\" href=\"#purpose\" title=\"Permalink to this heading\">#</a></h2>", "a[href=\"#purpose\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">1.\u00a0\u00a01. Purpose<a class=\"headerlink\" href=\"#purpose\" title=\"Permalink to this heading\">#</a></h2>"}
+selector_to_html = {"a[href=\"#purpose\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">1.\u00a0\u00a01. Purpose<a class=\"headerlink\" href=\"#purpose\" title=\"Permalink to this heading\">#</a></h2>", "a[href=\"#code-of-conduct\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Code of Conduct<a class=\"headerlink\" href=\"#code-of-conduct\" title=\"Permalink to this heading\">#</a></h1><h2>1.\u00a0\u00a01. Purpose<a class=\"headerlink\" href=\"#purpose\" title=\"Permalink to this heading\">#</a></h2>"}
 skip_classes = ["headerlink", "sd-stretched-link"]
 
 window.onload = function () {
