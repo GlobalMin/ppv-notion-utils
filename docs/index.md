@@ -3,11 +3,11 @@
 # PPV Notion Utils
 A set of helper scripts that automate or speed up componente of he Pillars, Pipelines, and Vaults (PPV) life design system that runs in Notion.
 
+Hi Emma!
 
-:::{admonition} PLEASE MAKE SURE YOU READ
+:::{admonition} Use case this code is designed for
 :class: note
-
-This is a custom title for a tip admonition.
+This
 :::
 
 :::{list-table} Project variables
@@ -40,5 +40,4 @@ The following core admonition types are available:
 guide
 codeofconduct
 reference
-
 ```

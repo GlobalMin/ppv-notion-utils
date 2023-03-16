@@ -35,6 +35,10 @@ help:
 
 
 
+clean :
+	@echo "Wiping out build directory"
+	@-rm -rf $(BUILDDIR)/*
+
 livehtml:
 	@sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 

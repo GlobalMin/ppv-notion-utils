@@ -37,7 +37,8 @@ def _find_page_where_title_value_matches_string(notiondb_pages_as_list, title):
         if p["properties"][title_prop_name_for_db]["title"][0]["plain_text"] == title:
             return p
             # type: ignore
-    return notiondb_pages_as_list[0]
+
+    raise ValueError(f"Could not find page with title '{title}' in database.")
 
 
 def _extract_properties_from_page(notion_page):
@@ -69,7 +70,9 @@ def _create_properties_copies_and_add_increment(num, properties_dict, days=7):
     new_dates = []
     for i in range(num):
         days_to_add = (i + 1) * days
-        updated_date = pd.to_datetime(original_date) + datetime.timedelta(days=days_to_add)
+        updated_date = pd.to_datetime(original_date) + datetime.timedelta(
+            days=days_to_add
+        )
         new_dates.append(updated_date.strftime("%Y-%m-%d"))
 
     # Main update step to the properties dict
@@ -94,11 +97,3 @@ def run_copy_and_increment_end_to_end(database_id, title, num, days=7):
             parent={"database_id": database_id},
             properties=prop,
         )
-
-
-# run_copy_and_increment_end_to_end(
-#     database_id="b12fc8c75b894680be8d0d03e1e2e170",
-#     title="Business meeting",
-#     num=3,
-#     days=7,
-# )

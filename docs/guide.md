@@ -10,7 +10,13 @@ This is the user guide
 for the [Hypermodern Python Cookiecutter],
 a Python template based on the [Hypermodern Python] article series.
 
+````{margin} My sidebar title
+:class: note
 
+  ```{note} Use case this code is designed for
+  This
+  ```
+````
 
 ## Introduction
 

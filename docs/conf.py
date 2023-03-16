@@ -85,10 +85,15 @@ html_show_copyright = False
 html_show_sphinx = False
 html_theme = "sphinx_book_theme"
 
-html_theme_options = {
-    "use_download_button": False,
-    "use_fullscreen_button": False,
-}
+# html_theme_options = {
+#     "use_download_button": False,
+#     "use_fullscreen_button": False,
+#     "home_page_in_toc": True,
+#     "show_nav_level": 2,
+#     "navigation_depth": 2
+# }
+
+
 
 # -- Autodoc settings ---------------------------------------------------
 
