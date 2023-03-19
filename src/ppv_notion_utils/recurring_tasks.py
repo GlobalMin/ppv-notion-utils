@@ -82,14 +82,14 @@ def _create_properties_copies_and_add_increment(num, properties_dict, days=7):
     return list_of_dates_to_return
 
 
-def run_copy_and_increment_end_to_end(database_id, title, num, days=7):
+def run_copy_and_increment_end_to_end(database_id, title, num:int, days_between=7):
     """
     Run the whole process of copying a page and incrementing the dates.
     """
     all_results = collect_paginated_api(notion.databases.query, database_id=database_id)
     page_copy = _find_page_where_title_value_matches_string(all_results, title)
     properties_with_updated_dates = _create_properties_copies_and_add_increment(
-        num, _extract_properties_from_page(page_copy), days=days
+        num, _extract_properties_from_page(page_copy), days=days_between
     )
 
     for prop in properties_with_updated_dates:

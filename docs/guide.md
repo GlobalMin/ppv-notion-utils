@@ -1,14 +1,7 @@
----
-myst:
-  substitutions:
-    HPC: "*Hypermodern Python Cookiecutter*"
----
 
 # User Guide
 
 This is the user guide
-for the [Hypermodern Python Cookiecutter],
-a Python template based on the [Hypermodern Python] article series.
 
 ````{margin} My sidebar title
 :class: note
@@ -18,14 +11,7 @@ a Python template based on the [Hypermodern Python] article series.
   ```
 ````
 
-## Introduction
-
-### About this project
-
-
-(features)=
-
-### Features
+## Features
 
 Here is a detailed list of features for this Python template:
 
@@ -35,9 +21,9 @@ Here is a detailed list of features for this Python template:
 
 ```
 
-### Version policy
+## Version policy
 
-The {{ HPC }} uses [Calendar Versioning] with a `YYYY.MM.DD` versioning scheme.
+The  uses [Calendar Versioning] with a `YYYY.MM.DD` versioning scheme.
 
 The current stable release is [2022.6.3].
 
@@ -121,7 +107,7 @@ $ pyenv install 3.9.10
 $ pyenv install 3.10.2
 ```
 
-After creating your project (see [below](creating-a-project)),
+After creating your project (see [below]),
 you can make these Python versions accessible in the project directory,
 using the following command:
 
@@ -163,8 +149,6 @@ $ poetry self update
 ```
 
 ## Project creation
-
-(creating-a-project)=
 
 ### Creating a project
 

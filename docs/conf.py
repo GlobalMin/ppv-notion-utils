@@ -5,10 +5,8 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.abspath(".."))
 
-import myst_parser
 from sphinx.application import Sphinx
 
-"""Sphinx configuration."""
 
 
 project = "PPV Notion utils"
@@ -85,13 +83,13 @@ html_show_copyright = False
 html_show_sphinx = False
 html_theme = "sphinx_book_theme"
 
-# html_theme_options = {
-#     "use_download_button": False,
-#     "use_fullscreen_button": False,
-#     "home_page_in_toc": True,
-#     "show_nav_level": 2,
-#     "navigation_depth": 2
-# }
+html_theme_options = {
+    "use_download_button": False,
+    "use_fullscreen_button": False,
+    "home_page_in_toc": True,
+    "show_nav_level": 2,
+    "navigation_depth": 2
+}
 
 
 
@@ -121,7 +119,7 @@ def setup(app: Sphinx):
     app.add_directive("myst-admonitions", MystAdmonitionDirective)
     app.add_directive("myst-to-html", MystToHTMLDirective)
     app.add_post_transform(StripUnsupportedLatex)
-    app.add_post_transform(NumberSections)
+    # app.add_post_transform(NumberSections)
     app.connect("html-page-context", add_version_to_css)
     app.add_lexer("myst", MystLexer)
 

@@ -1,5 +1,6 @@
 import datetime
 import os
+import re
 
 from dotenv import load_dotenv
 from notion_client import Client
@@ -75,3 +76,4 @@ def add_new_weekly_page(database_id, num_new_weeks=1):
             parent={"database_id": database_id},
             properties=props_to_copy,
         )
+

@@ -3,7 +3,6 @@
 # PPV Notion Utils
 A set of helper scripts that automate or speed up componente of he Pillars, Pipelines, and Vaults (PPV) life design system that runs in Notion.
 
-Hi Emma!
 
 :::{admonition} Use case this code is designed for
 :class: note
