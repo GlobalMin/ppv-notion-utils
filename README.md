@@ -7,5 +7,7 @@ Some basic automations for common tasks within the Pillars, Pipelines, and Vauls
 3. Fill in `WEEKS_DB` with the ID of the database that corresponds to the weekly review pages. This will allow you to bulk create new weeks in that db.
 4. Fill in `ACTION_ITEMS_DB` with the ID of the database that corresponds to the action items pages. This will allow you to bulk copy/paste recurring tasks at an 
 interval of your choosing.
+5. (Optoinal) Create a new virtual environment and install the dependencies with command `make install`. It's not a great idea to install dependencies globally on your machine but if you want you can simply run `pip install -r requirements.txt`.
+5. Open quick_start.ipynb for recurring tasks walkthrough.
 
 
