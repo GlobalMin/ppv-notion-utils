@@ -5,11 +5,8 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.abspath(".."))
 
-import myst_parser
 from sphinx.application import Sphinx
 
-
-"""Sphinx configuration."""
 
 
 project = "PPV Notion utils"
@@ -52,12 +49,11 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
     "attrs_block",
-    "attrs_inline"
-
+    "attrs_inline",
 ]
 
 myst_number_code_blocks = ["typescript"]
-myst_heading_anchors = 0
+myst_heading_anchors = 2
 myst_footnote_transition = True
 myst_dmath_double_inline = True
 myst_enable_checkboxes = True
@@ -80,20 +76,24 @@ suppress_warnings = ["myst.strikethrough"]
 # -- HTML output -------------------------------------------------
 html_title = "PPV Notion Utils"
 
-html_last_updated_fmt = ""
+
+html_show_copyright = False
+html_show_sphinx = False
 html_static_path = ["_static"]
 html_css_files = ["local.css"]
 html_show_copyright = False
-html_show_sphinx = False
-html_theme = "furo"
+html_theme = "sphinx_book_theme"
+html_last_updated_fmt = None
 
-# html_theme_options = {
-#     "light_css_variables": {
-#         "color-brand-primary": "red",
-#         "color-brand-content": "#CC3333",
-#         "color-admonition-background": "#C1C5FE",
-#     },
-# }
+html_theme_options = {
+    "use_download_button": False,
+    "use_fullscreen_button": False,
+    "home_page_in_toc": False,
+    "show_nav_level": 2,
+    "navigation_depth": 2
+}
+
+
 
 # -- Autodoc settings ---------------------------------------------------
 
@@ -121,7 +121,7 @@ def setup(app: Sphinx):
     app.add_directive("myst-admonitions", MystAdmonitionDirective)
     app.add_directive("myst-to-html", MystToHTMLDirective)
     app.add_post_transform(StripUnsupportedLatex)
-    app.add_post_transform(NumberSections)
+    # app.add_post_transform(NumberSections)
     app.connect("html-page-context", add_version_to_css)
     app.add_lexer("myst", MystLexer)
 
@@ -135,4 +135,3 @@ def add_version_to_css(app, pagename, templatename, context, doctree):
         hashed = hashlib.sha256(css.encode("utf-8")).hexdigest()
         index = context["css_files"].index("_static/local.css")
         context["css_files"][index] = f"_static/local.css?hash={hashed}"
-
