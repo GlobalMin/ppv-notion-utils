@@ -76,17 +76,19 @@ suppress_warnings = ["myst.strikethrough"]
 # -- HTML output -------------------------------------------------
 html_title = "PPV Notion Utils"
 
-html_last_updated_fmt = ""
+
+html_show_copyright = False
+html_show_sphinx = False
 html_static_path = ["_static"]
 html_css_files = ["local.css"]
 html_show_copyright = False
-html_show_sphinx = False
 html_theme = "sphinx_book_theme"
+html_last_updated_fmt = None
 
 html_theme_options = {
     "use_download_button": False,
     "use_fullscreen_button": False,
-    "home_page_in_toc": True,
+    "home_page_in_toc": False,
     "show_nav_level": 2,
     "navigation_depth": 2
 }

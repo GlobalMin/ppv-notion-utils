@@ -37,7 +37,7 @@ install:
 .PHONY: install_dev
 install_dev:
 	@echo "🚀 Install extra dependencies for rendering docs and testing"
-	@.venv/bin/pip install -r requirements-dev.txt
+	@.venv/bin/pip install -r requirements_dev.txt
 
 
 .PHONY: wipe_all
