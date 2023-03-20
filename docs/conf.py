@@ -84,6 +84,7 @@ html_css_files = ["local.css"]
 html_show_copyright = False
 html_theme = "sphinx_book_theme"
 html_last_updated_fmt = None
+html_logo = "_static/Untitled.png"
 
 html_theme_options = {
     "use_download_button": False,
