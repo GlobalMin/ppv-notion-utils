@@ -7,7 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - PPV Notion Utils</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Quickstart &#8212; PPV Notion Utils</title>
   
   
   
@@ -48,12 +50,13 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/design-tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
+    <script defer="defer" src="_static/tippy/quickstart.24503402-ae3e-414c-92f6-3292efa6e17f.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'quickstart';</script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="PPV Notion Utils" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -81,7 +84,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -141,8 +144,8 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="quickstart.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Quickstart
                       </a>
                     </li>
@@ -238,8 +241,8 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="quickstart.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Quickstart
                       </a>
                     </li>
@@ -301,51 +304,73 @@ document.write(`
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article"></div>
-              
-              
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
-    }
-  </script>
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
 
+
+
+<nav aria-label="breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Quickstart</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h1>
+<div class="note admonition" id="list-table-options">
+<p class="admonition-title">Copied from <a class="reference external" href="http://README.md">README.md</a></p>
+<ol class="arabic simple">
+<li><p>Create a Notion API token to let Python interact with your Notion workspace. You can do this by going to <a class="reference external" href="https://www.notion.so/my-integrations">https://www.notion.so/my-integrations</a> and creating a new integration. You’ll need to give it a name and select the “Read and write” permission. Once you’ve created the integration, you’ll be given a token that you can use to authenticate with Notion.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> to <code class="docutils literal notranslate"><span class="pre">.env</span></code> and paste your token into the <code class="docutils literal notranslate"><span class="pre">NOTION_TOKEN</span></code> field.</p></li>
+<li><p>Fill in <code class="docutils literal notranslate"><span class="pre">WEEKS_DB</span></code> with the ID of the database that corresponds to the weekly review pages. This will allow you to bulk create new weeks in that db.</p></li>
+<li><p>Fill in <code class="docutils literal notranslate"><span class="pre">ACTION_ITEMS_DB</span></code> with the ID of the database that corresponds to the action items pages. This will allow you to bulk copy/paste recurring tasks at an
+interval of your choosing.</p></li>
+<li><p>(Optoinal) Create a new virtual environment and install the dependencies with command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>. It’s not a great idea to install dependencies globally on your machine but if you want you can simply run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code>.</p></li>
+<li><p>Open quick_start.ipynb for recurring tasks walkthrough.</p></li>
+</ol>
+</div>
+</section>
+
+
+                </article>
+              
               
               
                 <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">PPV Notion Utils</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
