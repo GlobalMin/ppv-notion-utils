@@ -30,10 +30,10 @@ extensions = [
 
 # -- MyST settings ---------------------------------------------------
 myst_enable_extensions = [
-    "dollarmath",
-    "amsmath",
-    "deflist",
-    "fieldlist",
+    # "dollarmath",
+    # "amsmath",
+    # "deflist",
+    # "fieldlist",
     "html_admonition",
     "html_image",
     "colon_fence",
@@ -42,13 +42,13 @@ myst_enable_extensions = [
     "linkify",
     "strikethrough",
     "substitution",
-    "tasklist",
-    "attrs_block",
-    "attrs_inline",
+    # "tasklist",
+    # "attrs_block",
+    # "attrs_inline",
 ]
 
-myst_number_code_blocks = ["typescript"]
-myst_heading_anchors = 2
+# myst_number_code_blocks = ["typescript"]
+myst_heading_anchors = 3
 myst_footnote_transition = True
 myst_dmath_double_inline = True
 myst_enable_checkboxes = True
@@ -82,11 +82,16 @@ html_static_path = ["_static"]
 html_css_files = ["local.css"]
 html_logo = "_static/Untitled.png"
 
+html_sidebars = {
+    "index": [],  # Remove sidebars on landing page to save space
+}
+
 html_theme_options = {
     "external_links": [
-        {"name": "link-one-name", "url": "https://<link-one>"},
-        {"name": "link-two-name", "url": "https://<link-two>"},
-    ]
+        {"name": "PPV Course", "url": "https://www.yearzero.io/notion-life-design"},
+    ],
+    "show_toc_level": 3,
+    "navbar_align": "left",
 }
 
 
@@ -115,7 +120,7 @@ html_theme_options = {
 #     app.add_directive("myst-example", MystExampleDirective)
 #     app.add_directive("myst-admonitions", MystAdmonitionDirective)
 #     app.add_directive("myst-to-html", MystToHTMLDirective)
-#     app.add_post_transform(StripUnsupportedLatex)
+#     # app.add_post_transform(StripUnsupportedLatex)
 #     # app.add_post_transform(NumberSections)
 #     app.connect("html-page-context", add_version_to_css)
 #     app.add_lexer("myst", MystLexer)
@@ -129,4 +134,4 @@ html_theme_options = {
 #         css = Path(app.srcdir, "_static/local.css").read_text("utf8")
 #         hashed = hashlib.sha256(css.encode("utf-8")).hexdigest()
 #         index = context["css_files"].index("_static/local.css")
-#         context["css_files"][index] = f"_static/local.css?hash={hashed}"
+# context["css_files"][index] = f"_static/local.css?hash={hashed}"

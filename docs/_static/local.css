@@ -1,11 +1,31 @@
-
-
 /* Hide footer */
 .bd-footer {
-    display: none;
+  display: none;
 }
 
-
 footer.bd-footer-content .bd-footer-content__inner {
-    display: none;
+  display: none;
+}
+
+h3 {
+  color: #459db9;
+  font-size: calc(var(--pst-font-size-h3) * 0.8);
+}
+
+.page-toc .onthispage {
+  color: #b94587;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bd-sidebar-secondary .onthispage {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
 }

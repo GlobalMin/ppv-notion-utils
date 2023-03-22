@@ -1,13 +1,27 @@
 # PPV Notion Utils
 
+> Yet another workaround solution to make Notion have basic recurring tasks functionality. Many paid options are well known as well as decent
+> free ones. Most are GUI based flows that are too bulky and tedious for this one very specific use case. So this repo tries to be a free option
+> to have a recurring task system that can be pulled out whenever needed and the setup will stay the same, so it'll remain fast and focused on
+> this one task.
+
 Some basic automations for common tasks within the Pillars, Pipelines, and Vauls (PPV) system that runs on Notion. **Note that PPV is a paid product and this won't apply to you if you're not using it.**
 
-Check out course info here if you want to know what this is about:  
+Check out course info here if you want to know what this is about:
 https://www.yearzero.io/notion-life-design
 
 ---
 
-## Recurring task automation
+## Recurring tasks
+
+The thing that must not be mentioned to a Notion fan.
+
+### Within native Notion
+
+Notion infamously doesn't have a native way to create recurring tasks. They released functionality to repeat templates and this seems potentially close enough at first
+but there isn't a way to filter on a future date which makes it basically useless.
+
+### Solution this repo provides
 
 :::{card} Before
 
@@ -25,7 +39,7 @@ https://www.yearzero.io/notion-life-design
 
 :::
 
-# Quickstart
+## Quickstart
 
 ```{admonition} Copied from README.md
 :class: note
@@ -41,14 +55,6 @@ interval of your choosing.
 
 ```
 
-# Links
-
-## Notion
-
-## PPV
-
-```{toctree}
-:hidden:
-quickstart
-
-```
+:::{card} Now...
+Now open up [quick-start.ipynb](https://github.com/GlobalMin/ppv-notion-utils/blob/e4e4f082957834a124b049f70c651fdabff176d2/quick_start.ipynb) and follow the instructions there.
+:::
